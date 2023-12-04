@@ -34,10 +34,11 @@ def isSpecial(index, line):
 for x in range(len(engine)):
     line = engine[x].strip()
     for number in re.finditer("\d+", line):
+        # print("Number:",engine[x][number.start():number.end()])
         before = isValid(x-1, number.start()-1, number.end()+1)
         after = isValid(x+1, number.start()-1, number.end()+1)
         left = isSpecial(number.start()-1, line)
-        right = isSpecial(number.end()+1, line)
+        right = isSpecial(number.end(), line)
         if before or after or left or right:
             total += int(engine[x][number.start():number.end()])
 
