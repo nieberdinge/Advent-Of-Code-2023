@@ -9,7 +9,7 @@ total = 0
 for line in f.readlines():
     word = line.strip()
     min = 100000
-    max = 0
+    max = -1
     minNumber = ""
     maxNumber = ""
     for number in numbers:
