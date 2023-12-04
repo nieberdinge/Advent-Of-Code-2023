@@ -16,6 +16,10 @@ def isValid(line, start, stop):
     sub = engine[line][start:stop]
     sub = re.sub(r"\.","", sub)
     sub = re.sub(r"\d","", sub)
+
+    # check if gear box 
+    # if so, find index
+    
     if len(sub) > 0:
         return True
     return False
@@ -43,6 +47,8 @@ for x in range(len(engine)):
             total += int(engine[x][number.start():number.end()])
 
 
-
-print("the total is", total)
+# check if it is a gear box
+# if so, dict<string "x+y", list[]>
+# at the end check if list == 2
+print("Part 1 is:", total)
 f.close()
