@@ -39,4 +39,4 @@ for coord1 in coords:
     for coord2 in coords:
         total += abs(coord1[0] - coord2[0]) + abs(coord1[1] - coord2[1])
 
-print(total)
+print(total/2)
